@@ -1,0 +1,50 @@
+<html lang ="en">
+    <head>
+    <meta charset ="utf-8">
+    <title>Security webpages and videos</title>
+        <link href="styles.css" rel="stylesheet" type="text/css">
+    </head>
+<body>
+    
+<div class="dropdown">
+<button onclick ="menuClick()" class = "dropbtn">Menu</button>
+<div id="menudropdown" class ="dropdown-content">
+    <a href ="home.html">Home</a>
+    <a href ="articles.html">Security Articles</a>
+    <a href ="webpagesandvideos.html">Security Webpages and videos</a>
+    </div>   
+</div>
+
+<h3>Security web pages and videos</h3>
+    <ul>
+    <li><a href="http://news.sky.com/story/nhs-told-to-act-on-cyber-security-or-face-worse-hack-11099947" title="skynews">Sky News</a></li>
+    <li><a href = "http://www.reuters.com/article/us-cyber-summit-kaspersky/kaspersky-ceo-says-hack-claims-cutting-u-s-cyber-security-sales-idUSKBN1CW2P1" title = "reyters">Reuters</a></li>
+    <li><a href="https://www.wired.com/2017/01/biggest-security-threats-coming-2017/">Wired</a></li>
+        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Security Video</a></li>
+        <li><a href = "https://www.youtube.com/watch?v=oOoMqgnvZaY">Youtube video: 10 worst hacks</a></li>
+    </ul>
+    
+    <iframe src = "https://www.youtube.com/embed/DF8Ka8Jh0BQ" width="560" height="315" allowfullscreen frameborder ="0"></iframe>
+    
+            
+
+<script>
+function menuClick(){
+    document.getElementById("menudropdown").classList.toggle("show");
+}
+    
+window.onclick = function(event){
+ if(!event.target.matches('.dropbtn')){
+    var dropdown = document.getElementsByClassName("dropdown-content");
+     var i;
+     for(i =0; i< dropdown.length; i++){
+         var openDropdown = dropdown[i];
+         if(openDropdown.classList.contains('show')){
+             openDropdown.classList.remove('show');
+         }
+     }
+ }
+}
+</script>    
+</body>
+</html>

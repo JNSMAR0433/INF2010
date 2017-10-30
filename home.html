@@ -1,0 +1,48 @@
+<!DOCTYPE HTML for project INF2010 Mark Jones>
+<html lang = "en">
+<head>
+<meta charset = "utf-8">
+<title> Computer Security</title>
+<link href="styles.css" rel ="stylesheet" type = "text/css">
+</head>
+<body>
+    
+<div class="dropdown">
+<button onclick ="menuClick()" class = "dropbtn">Menu</button>
+<div id="menudropdown" class ="dropdown-content">
+    <a href ="home.html">Home</a>
+    <a href ="articles.html">Security Articles</a>
+    <a href ="webpagesandvideos.html">Security Webpages and videos</a>
+    </div>   
+</div>
+
+ <article role="article">
+<header>
+    
+    <section>
+    <h3>Computer Security</h3>
+        <p>Computer security is of increasing importance in this day and age. This notion is constantly re-inforced as data breaches and hacks are pervasive and widely reported some recent security breaches include equiax, department of home affairs and yahoo.com</p>
+    </section>
+     </header>
+     <img src = "03_shipping_malware-100694090-large.jpg" alt ="HTML" >
+    </article>   
+<script>
+function menuClick(){
+    document.getElementById("menudropdown").classList.toggle("show");
+}
+    
+window.onclick = function(event){
+ if(!event.target.matches('.dropbtn')){
+    var dropdown = document.getElementsByClassName("dropdown-content");
+     var i;
+     for(i =0; i< dropdown.length; i++){
+         var openDropdown = dropdown[i];
+         if(openDropdown.classList.contains('show')){
+             openDropdown.classList.remove('show');
+         }
+     }
+ }
+}
+</script>    
+</body>
+</html>
